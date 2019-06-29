@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div id="heading" selid=autoHeading>
+		<h1>Result - Login Successfully</h1>
+    </div>
+    
+    
+    	<p th:text="'id: ' + ${user.id}" />
+    <div id="role" selid="autoRole">	<p th:text="'Role of the user is ' + ${user.role}" /> </div>
+    	<a href="/login">Back to login Page</a>
+    
+<!--  <p th:text="'Password: ' + ${user.userPassword}" /> -->
+</body>
+</html>

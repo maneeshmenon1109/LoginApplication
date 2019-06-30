@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.common.reusable.CommonMethods;
+import com.common.reusable.CommonUtilities;
 
 @Controller
 @RequestMapping("login")
@@ -22,7 +22,7 @@ public class LoginController {
     @PostMapping
     public String loginSubmit(@ModelAttribute User user) {
      
-    	String role=CommonMethods.loginValidator(user.getId(),user.getUserPassword());
+    	String role=CommonUtilities.loginValidator(user.getId(),user.getUserPassword());
     	
     	if (!role.contains("Error"))
     	{
